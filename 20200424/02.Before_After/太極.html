@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* Body的內容水平、垂直置中 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(90deg, white 50%, black 50%);
+            box-shadow: 0 0 10px #000;
+            border-radius: 50%;
+        }
+
+        .box1,
+        .box2 {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+
+        .box1::before,
+        .box2::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .box1::before {
+            top: 50%;
+            left: 25%;
+            background: black;
+        }
+
+
+        .box2::before {
+            left: 25%;
+            background: white;
+        }
+
+        .box1::after,
+        .box2::after {
+            content: '';
+            position: absolute;
+            width: 15%;
+            height: 15%;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+
+        .box1::after {
+            left: 40%;
+            top: 65%;
+            background: white;
+        }
+
+        .box2::after {
+            left: 40%;
+            top: 15%;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+
+    </div>
+
+
+</body>
+
+</html>
