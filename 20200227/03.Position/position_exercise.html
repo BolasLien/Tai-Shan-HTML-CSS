@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            padding: 20px;
+            margin: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #000;
+            border-radius: 8%;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            margin: 2px;
+            background-image: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.2));
+
+            float: left;
+            position: relative;
+        }
+
+        .point {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: black;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .left{
+            left: 30px;
+        }
+
+        .right{
+            left: 120px;
+        }
+
+        .top_left{
+            top: 30px;
+            left: 30px;
+        }
+
+        .top_right{
+            top: 30px;
+            left: 120px;
+        }
+
+        .bottom_left{
+            top: 120px;
+            left: 30px;
+        }
+
+        .bottom_right{
+            top: 120px;
+            left: 120px;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="point" style="background: red;"></div>
+        </div>
+        <div class="box">
+            <div class="point top_left"></div>
+            <div class="point bottom_right"></div>
+        </div>
+        <div class=" box">
+            <div class="point top_left"></div>
+            <div class="point"></div>
+            <div class="point bottom_right"></div>
+        </div>
+        <div class="box">
+            <div class="point top_left"></div>
+            <div class="point top_right"></div>
+            <div class="point bottom_left"></div>
+            <div class="point bottom_right"></div>
+        </div>
+        <div class="box">
+            <div class="point top_left"></div>
+            <div class="point top_right"></div>
+            <div class="point"></div>
+            <div class="point bottom_left"></div>
+            <div class="point bottom_right"></div>
+        </div>
+        <div class="box">
+            <div class="point top_left"></div>
+            <div class="point left"></div>
+            <div class="point bottom_left"></div>
+            <div class="point top_right"></div>
+            <div class="point right"></div>
+            <div class="point bottom_right"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棋盤</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* Body的內容水平、垂直置中 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 把body設為透視容器 */
+            transform-style: preserve-3d;
+            /* 透視距離，值越小代表我離物體越近，物體的透視效果就會看起來比較激烈 */
+            perspective: 2000px;
+        }
+
+        table {
+            width: 600px;
+            height: 600px;
+            outline: 1px solid #000;
+            border-spacing: 0;
+
+            /* 轉場時間 */
+            transition: 1s;
+        }
+
+        /* 因為有設定轉場時間，所以滑鼠移到物體上的時候，會照時間慢慢轉過去 */
+        table:hover {
+            transform: rotateX(180deg) rotateY(180deg);
+        }
+
+        table tr:nth-child(odd) td:nth-child(odd) {
+            background-color: black;
+        }
+
+        table tr:nth-child(even) td:nth-child(even) {
+            background-color: black;
+        }
+
+        table tr:nth-child(odd) td:nth-child(even) {
+            background-color: wheat;
+        }
+
+        table tr:nth-child(even) td:nth-child(odd) {
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- <div style="height: 500px;">
+        <div style="width: 80%;background: red;height: 100%;">1</div>
+    </div> -->
+</body>
+
+</html>

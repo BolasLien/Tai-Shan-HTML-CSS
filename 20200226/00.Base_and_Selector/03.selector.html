@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>選擇器</title>
+    <style>
+        /* 類別選擇器
+            1. 命名前面一定要加個半形句點(.)
+            2. 只允許 字元、數字、連字、減號(-)，底線(_)
+            3. 句點後必須以字源開始，不能用數字開頭、中文命名
+            4. 類別、ID的名稱有大小寫區分
+        */
+        .a{
+            color: red;
+        }
+
+        li{
+            color:green;
+            font-size: 20px;
+        }
+
+        .b{
+            color: darkmagenta;
+        }
+
+        /* 
+            ID選擇器
+            1.命名前面一定要加個#
+        */
+        #a{
+            width: 300px;
+            height: 300px;
+            background: darksalmon;
+        }
+
+        /* 後代選擇器，選擇後代子孫，nav裡面的所有p */
+        nav p{
+            color: blue;
+        }
+
+        /* 子代選擇器，只選擇兒子，nav下一層的p */
+        nav>p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用類別選擇器 -->
+    <h1 class="a">Class 選擇器</h1>
+    <p>class是CSS樣式<em class="a">最常</em>被使用的選擇器，具有重複使用的特性，往後學習<a class="a" href="#"> Bootstrap</a>時，可以看到大量樣式被設計成class</p>
+
+    <h2>相同標籤，不同外觀</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li class="b">Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <hr>
+
+    <h1>ID選擇器</h1>
+    <p>在一份文件裡面，只能有一個獨一無二的ID，具有唯一的特性，通常作為網頁邏輯區塊名稱，或是js、jq控制元素的選擇器。</p>
+
+    <div id="a"></div>
+    <div id="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est totam illo excepturi officia dolor minus, fuga natus pariatur rem iste?</div>
+    <button id="btn">點我收合</button>
+    
+    <hr>
+
+    <h1>後代選擇器與子代選擇器</h1>
+    <nav>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </nav>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $('#btn').click(function(){
+            $('#container').slideToggle();
+        })
+    </script>
+</body>
+</html>

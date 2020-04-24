@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 標題 Heading or Header，1最大、6最小 -->
+    <h1>Hello world</h1>
+    <h2>Hello world</h2>
+    <h3>Hello world</h3>
+    <h4>Hello world</h4>
+    <h5>Hello world</h5>
+    <h6>Hello world</h6>
+
+    <!-- 水平線 hr -->
+    <hr>
+
+    <!-- 段落 p -->
+    <p>段落</p>
+    <>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla totam aliquid alias sed repellendus doloribus nam dolorum voluptatibus minus ex reiciendis facere minima nostrum, velit, numquam itaque! Dignissimos dolor iste delectus impedit deleniti accusamus magni adipisci, laudantium sequi, incidunt dolores earum suscipit quia aut consequatur. Amet perspiciatis magnam aliquam corporis fuga laborum voluptatibus autem! Placeat vero aperiam repellat ex cupiditate harum quibusdam!<br> Minus vel debitis pariatur. Sit iure, ad at necessitatibus odit ipsa nulla molestiae vero aut deserunt, nisi magni repellendus. Nisi, aliquid tempora! Ex doloribus assumenda dolor. </p>
+    <hr>
+
+    <!-- 超連結 a，href =>路徑，target =>點下去後頁面開啟的動作 -->
+    <a href="https://www.google.com.tw/" target="_blank">Google </a>
+    <a href="https://www.google.com.tw/" target="_blank">Google姊 </a>
+    <!-- 換行 br -->
+    <br>
+    <a href="https://www.google.com.tw/" target="_blank">Google </a>
+    <a href="https://www.google.com.tw/" target="_blank">Google妹 </a>
+    <hr>
+
+    <!-- 本地超連結的方式 -->
+    <a href="01.intro.html">01.intro.html</a>
+    <br>
+    <a href="others/others.html" target="_blank">others.html</a>
+
+    <!-- 錨點，跳到同一頁指定的id位置 -->
+    <a href="#formtable">前往表單的表格</a>
+
+    <!-- 無序清單 ul，前面是點點 -->
+    <ul>
+        <li>上網</li>
+        <li>看電影</li>
+        <li>唱歌</li>
+        <li>逛街</li>
+    </ul>
+
+    <!-- 有序清單 ol，前面是數字 -->
+    <ol>
+        <li>上網</li>
+        <li>看電影</li>
+        <li>唱歌</li>
+        <li>逛街</li>
+    </ol>
+
+    <!-- 圖片 img，src=>來源，width=>寬度，height=>高度，alt=>圖片破圖的時候顯示替代文字，title=>滑鼠指上顯示文字 -->
+    <!-- 相對路徑，正在編輯的檔案位置為起點去找到檔案位置，製作網站要用相對路徑 -->
+    <img src="images/black.jpg" width="300" alt="頭痛壞掉了" title="頭痛">
+    <img src="image/black.jpg" width="300" alt="頭痛壞掉了" title="頭痛">
+    <br>
+    <!-- 絕對路徑，到別人家取得物件 -->
+    <img src="https://picsum.photos/300/300/?random=3">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" width="300">
+    <hr>
+
+    <!-- marquee 跑馬燈 -->
+    <marquee>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis dolor fugit rem dolores illo illum qui unde nihil ut minima eaque architecto, porro voluptas beatae similique saepe, quibusdam blanditiis!</marquee>
+
+    <!-- iframe 頁框 -->
+    <iframe src="01.intro.html" frameborder="0" scrolling="no"></iframe>
+    <br>
+
+    <!-- 將03.HTML_structure.html 連結到 target 是 showFrame的頁框 -->
+    <a href="03.HTML_structure.html" target="showFrame">點擊我</a>
+    <br>
+    <!-- 預設頁是01.intro.html -->
+    <iframe src="01.intro.html" frameborder="0" name="showFrame" width="800" height="300"></iframe>
+    <br>
+    <hr>
+
+    <!-- bold 粗體 -->
+    <b>b是粗體</b>
+    <br>
+    <strong>strong也是粗體</strong>
+    <br><br>
+
+    <!-- italic 斜體 -->
+    <i>i是斜體</i>
+    <br>
+    <em>em也是斜體</em>
+    <br><br>
+
+    <!-- strike 刪除線 -->
+    <s>s是刪除線</s>
+    <br>
+    <del>del也是刪除線</del>
+    <br><br>
+
+    <!-- pre 照空格跟斷行顯示 -->
+    <pre>
+         <!-- code 程式碼 -->
+        <code>
+var btn = document.getElementById('btn1');
+var a = 0;
+
+btn.onclick = function(){
+        a = a+1;
+        document.getElementById('count').innerText = a;
+}
+        </code>
+    </pre>
+
+    <!-- table 表格，cellspacing=>儲存格與儲存格之間的距離，cellpadding=>儲存格自己的內距，align=>文字對齊 -->
+    <table border="1" width="300" cellspacing="10" cellpadding="10" align="center">
+        <!-- tr 列 -->
+        <tr align="right">
+            <!-- td 列裡面的資料欄位 -->
+            <td>1</td>
+            <!-- colspan 橫排欄位合併，由自己開始往右的n個欄位進行合併=n+1 -->
+            <td colspan="2">2</td>
+            <!-- <td>3</td> -->
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <!-- rowspan 直排欄位合併，由自己開始往下的n個欄位進行合併=n+1 -->
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td rowspan="3">5</td>
+        </tr>
+        <tr>
+            <!-- <td>1</td> -->
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <!-- <td>5</td> -->
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <!-- <td>5</td> -->
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td colspan="3">3</td>
+            <!-- <td>4</td>
+            <td>5</td> -->
+        </tr>
+    </table>
+
+    <br>
+    <form method="POST">
+        <table width="50%" border="1" cellpadding="5" cellspacing="5" id="formtable">
+            <tr>
+                <td width="100">帳號：</td>
+                <td>
+                    <!-- input 表單，size=>表單長度，maxLength=>輸入字元上限，placeholder=>提示文字 -->
+                    <input type="text" size="30" maxlength="6" placeholder="請輸入6字元帳號" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td width="100">密碼：</td>
+                <td>
+                    <input type="password" size="30" maxlength="8" placeholder="請輸入8字元密碼" name="pw">
+                </td>
+            </tr>
+            <tr>
+                <td width="100">性別：</td>
+                <td>
+                    <!-- radio的name如果一樣，是在同一組只能單選；反之可以多選 -->
+                    <input type="radio" name="gender" value="男">男
+                    <!-- checked=>預選 -->
+                    <input type="radio" name="gender" value="女" checked>女
+                </td>
+            </tr>
+            <tr>
+                <td width="100">興趣：</td>
+                <td>
+                    <input type="checkbox" "name="like" value="拍照">拍照
+                    <input type="checkbox" "name="like" value="看書">看書
+                    <input type="checkbox" "name="like" value="唱歌">唱歌
+                    <input type="checkbox" "name="like" value="寫網頁">寫網頁
+                </td>
+            </tr>
+            <tr>
+                <td width="100">出生年份：</td>
+                <td>
+                    <select name="mySelect" >
+                        <option value="1980">1980</option>
+                        <option value="1990">1990</option>
+                        <option value="2000">2000</option>
+                        <option value="2010">2010</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="100">上傳檔案：</td>
+                <td>
+                    <input type="file" name="upload">
+                </td>
+            </tr>
+            <tr>
+                <td width="100"></td>
+                <td>
+                    <textarea name="msg" id="" cols="50" rows="10" maxlength="200" placeholder="限制輸入200字"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="100"></td>
+                <td>
+                    <input type="submit" value="送出">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <!-- 錨點，回頂層 -->
+    <a href="#">回頂層</a>
+</body>
+</html>

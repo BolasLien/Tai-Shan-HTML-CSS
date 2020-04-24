@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 960px;
+            margin: auto;
+            background: #ffa;
+            padding: 1rem;
+        }
+
+        .float_left {
+            float: left;
+        }
+
+        /* 不想配合文繞的標籤可以用clear */
+        .clear_left {
+            clear: left;
+        }
+
+        .float_right {
+            float: right;
+        }
+
+        .clear_right {
+            clear: right;
+        }
+
+        .clear_both {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>早期文繞圖的作法</h1>
+        <hr>
+        <img src="https://picsum.photos/200/200/?random=1" align="right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repellendus modi cumque tenetur expedita!
+            Veritatis tempore autem voluptatibus error iste natus quas, nam illum quisquam, placeat repellat suscipit
+            reprehenderit ipsum quaerat quos sunt nemo illo ad ratione animi iure fugit unde debitis? Obcaecati
+            cupiditate ad cum! Tempora expedita beatae dicta voluptatum inventore, tempore similique quis, architecto a
+            mollitia qui voluptates iusto aliquam nemo minima ipsa repudiandae molestiae ea, in fuga commodi rerum
+            adipisci. Odit sapiente corrupti quo adipisci in, temporibus molestias libero nihil neque suscipit, vero
+            architecto pariatur veniam quasi ut error. Exercitationem totam, porro optio vitae similique dolor?
+            Accusamus voluptate officiis dolores ullam officia. Beatae, nemo molestiae, optio praesentium vel dolorem
+            sit qui sed architecto quae ducimus nam voluptatibus sint sunt nisi eos assumenda aut impedit. Tempora
+            distinctio qui, tenetur voluptate delectus, eos debitis aut enim tempore necessitatibus provident fugiat
+            iure expedita natus sit ea soluta. Excepturi, enim veniam numquam quo fugiat itaque nam. Voluptas beatae
+            quas voluptates ratione rem sit, explicabo qui asperiores illo culpa tempore earum saepe, mollitia id
+            necessitatibus a exercitationem optio eveniet, assumenda obcaecati vero? Et perferendis sunt itaque
+            cupiditate doloremque atque obcaecati dolore temporibus ratione! Fuga repellat quaerat debitis dolore quae
+            explicabo quis ipsam.</p>
+    </div>
+
+    <div class="container">
+        <h1>浮動</h1>
+        <hr>
+        <img class="float_left" src="https://picsum.photos/200/200/?random=2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam praesentium error repellendus,
+            consequuntur enim nam! Doloremque, dolore. Suscipit dolores excepturi illum ipsum quos repellat cupiditate,
+            maiores molestias voluptates, optio nostrum adipisci molestiae recusandae ab iste nihil nesciunt culpa quas
+            corporis, distinctio mollitia? Consectetur ullam recusandae laboriosam pariatur eaque dicta repudiandae,
+            culpa qui quasi deserunt asperiores accusantium at a quisquam natus, magnam enim cupiditate quae. Deserunt,
+            similique accusamus repellat ipsum amet ad nobis rem, maxime voluptate vel dolorem facilis ipsa illum
+            aliquid? Magni suscipit minus impedit quis placeat? Assumenda sint, praesentium debitis saepe optio beatae
+            incidunt ipsum iure, perspiciatis ut eligendi.
+        </p>
+        <p class="clear_left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam praesentium error
+            repellendus,
+            consequuntur enim nam! Doloremque, dolore. Suscipit dolores excepturi illum ipsum quos repellat cupiditate,
+            maiores molestias voluptates, optio nostrum adipisci molestiae recusandae ab iste nihil nesciunt culpa quas
+            corporis, distinctio mollitia? Consectetur ullam recusandae laboriosam pariatur eaque dicta repudiandae,
+            culpa qui quasi deserunt asperiores accusantium at a quisquam natus, magnam enim cupiditate quae. Deserunt,
+            similique accusamus repellat ipsum amet ad nobis rem, maxime voluptate vel dolorem facilis ipsa illum
+            aliquid? Magni suscipit minus impedit quis placeat? Assumenda sint, praesentium debitis saepe optio beatae
+            incidunt ipsum iure, perspiciatis ut eligendi.
+        </p>
+        <hr>
+        <h2>float-right</h2>
+        <img class="float_right" src="https://picsum.photos/200/200/?random=3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit unde omnis, fugit nesciunt veniam vitae
+            debitis doloremque nihil? Voluptatibus explicabo magnam atque laborum nostrum vero alias quisquam nulla
+            blanditiis delectus.</p>
+        <p class="clear_right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit unde omnis, fugit
+            nesciunt veniam vitae
+            debitis doloremque nihil? Voluptatibus explicabo magnam atque laborum nostrum vero alias quisquam nulla
+            blanditiis delectus.</p>
+        <hr>
+        <h2>float_left 和 float_right</h2>
+        <img class="float_left" src="https://picsum.photos/300/300/?random=1">
+        <img class="float_right" src="https://picsum.photos/200/200/?random=1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio asperiores ad expedita soluta autem, deserunt
+            sint alias iure ipsa inventore!</p>
+        <p class="clear_right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem dignissimos
+            aliquid provident
+            odio veniam inventore! In animi similique at adipisci aut recusandae natus magni optio doloribus laudantium
+            perferendis fuga ullam quae, nostrum suscipit exercitationem repellendus vel ad. Iure nihil voluptatem at
+            iste quia. Minima voluptatum suscipit laudantium molestiae, fugit odit, odio consequatur incidunt eveniet
+            non expedita beatae, assumenda laboriosam?</p>
+
+    </div>
+
+</body>
+
+</html>

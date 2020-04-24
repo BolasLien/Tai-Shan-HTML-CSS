@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background: lemonchiffon;
+            /* 假如背景被吃掉的話的解法1:overflow: hidden; */
+            /* overflow: hidden; */
+            /* 假如背景被吃掉的話的解法2:display: table; */
+            /* display: table; */
+        }
+
+        .col {
+            width: 300px;
+            background: brown;
+            float: left;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        /* 假如背景被吃掉的話的解法3:偽元素 */
+        /* 偽元素，用來當作一個獨立的區塊 */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container clearfix">
+        <div class="col">
+            <img src="https://picsum.photos/300/300/?random=1">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore recusandae fugit perspiciatis beatae
+                quisquam deserunt! Ex assumenda non temporibus voluptates.</p>
+        </div>
+        <div class="col">
+            <img src="https://picsum.photos/300/300/?random=1">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore recusandae fugit perspiciatis beatae
+                quisquam deserunt! Ex assumenda non temporibus voluptates.</p>
+        </div>
+        <div class="col">
+            <img src="https://picsum.photos/300/300/?random=1">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore recusandae fugit perspiciatis beatae
+                quisquam deserunt! Ex assumenda non temporibus voluptates.</p>
+        </div>
+    </div>
+    <div style="width: 300px;height: 100px; float:left;background: red;padding: 1rem;">Lorem ipsum dolor sit.</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sint perferendis est id minima cupiditate
+        minus facilis nisi, eos esse corrupti mollitia accusamus voluptatum cumque veniam reiciendis molestias harum
+        consectetur?</div>
+</body>
+
+</html>

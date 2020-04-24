@@ -1,0 +1,59 @@
+<!-- !DOCTYPE 宣告HTML5 文件 -->
+<!DOCTYPE html>
+<html>
+    <!-- head 紀錄的是給瀏覽器看的資訊 -->
+    <head>
+        <!-- 字元編碼，UTF-8 確保各國瀏覽該網頁時可以正常顯示文字 -->
+        <meta charset="UTF-8" />
+        <!-- 屬性名稱 =屬性值 name/value 的關係，也可以在CSS、Js看到這種關係 -->
+        <!-- 這一行是給搜尋引擎看的 -->
+        <meta name="description" content="這是我的第一個網頁">
+        <title>我的第一個網頁</title>
+        <!-- link 連結到CSS外部檔案 -->
+        <link href="css/example.css">
+        <!-- style是給這份HTML看的CSS -->
+        <style>
+            /* 本頁使用的CSS */
+            /*  */
+            body{
+                background: #ffa;
+            }
+        </style>
+    </head>
+
+    <!-- body 是給瀏覽者看的內容 -->
+    <body>
+        <h1>第一個網頁</h1>
+        <p>HTML是網頁最基礎的技術#(*%&@$)(</p>
+        <button id="btn">顯示現在時間</button>
+        <div id="showTime"></div>
+        <!-- 外部的js檔 -->
+        <script src="js/example.js"></script>
+        <script>
+            // script 標籤標記的是元素演員的腳本、劇本
+            // 確認元素演員先登上舞台，劇本才開始
+            // 本頁使用的js程式碼
+            var btn = document.getElementById('btn');
+            btn.onclick = function(){
+                setInterval(() => {
+                    document.getElementById('showTime').innerText = Date();
+                }, 1000);
+            }
+        </script>
+
+        <button id="btn1">按一次加1</button>
+        <div id="count">a</div>
+        <script>
+            var btn = document.getElementById('btn1');
+            var a = 0;
+
+            btn.onclick = function(){
+                    a = a+1;
+                    document.getElementById('count').innerText = a;
+            }
+
+        </script>
+    </body>
+
+
+</html>

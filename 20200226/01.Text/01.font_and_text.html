@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font-style{
+            /* 文字尺寸單位:px,em,rem */
+            font-size: 28px;
+            /* 斜體 */
+            font-style: italic;
+            /* 粗體 */
+            font-weight: bold;
+            /* 文字全部變大寫，並且第一個文字再加大 */
+            font-variant: small-caps;
+        }
+        .text-style{
+            font-size: 30px;
+            text-align: left;
+            text-decoration: underline;
+            text-indent: 60px;
+            /* uppercase全大寫、lowercase全小寫、capitalize每個單字開頭大寫 */
+            text-transform: capitalize;
+            /* 
+                第一個數字：x軸
+                第二個數字：y軸
+                第三個數字：陰影模糊半徑
+                rgba()=>a=alpha，0完全透明、1完全不透明
+            */
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.527);
+        }
+    </style>
+</head>
+<body>
+    <h1>設定 Font</h1>
+    <p class="font-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam numquam temporibus quisquam mollitia molestiae exercitationem enim id cupiditate quo quidem rerum laboriosam animi, iusto, culpa repudiandae error voluptatibus, magni amet.</p>
+
+    <h1>設定 Text</h1>
+    <p class="text-style">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam soluta velit libero eveniet, atque expedita illum tempore veniam natus voluptatibus!</p>
+</body>
+</html>
