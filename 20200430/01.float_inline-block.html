@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .container1 {
+            width: 1200px;
+            margin: auto;
+            border: 1px solid #333;
+            font-size: 0px;
+            /* ↑ inline-block排版會有幾px的間隙產生，font-size:0px; 可以把這個間隙消除 */
+        }
+
+        .col1 {
+            width: 30%;
+            margin: 0 1.666666%;
+            display: inline-block;
+            font-size: 1rem;
+        }
+
+        .container2 {
+            width: 1200px;
+            margin: auto;
+            border: 1px solid #333;
+            background: #FFA;
+            overflow: auto;
+            /*↑ float排版會有父元素高度崩塌的問題，用overflow:hidden; 或 overflow:auto; 叫回來*/
+        }
+
+        .col2 {
+            width: 30%;
+            margin: 0 1.666666%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline-block 排版 -->
+    <h1>inline-block 排版</h1>
+    <p>必須處理 inlien-block 之間的幾 px 的空白問題</p>
+    <div class="container1">
+        <div class="col1">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+        <div class="col1">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+        <div class="col1">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+    </div>
+
+    <!-- float 排版 -->
+    <h1>Float 排版</h1>
+    <p>如果子元素全部float，沒有內容撐起父元素高度，必須處理父元素高度崩塌的問題</p>
+    <div class="container2">
+        <div class="col2">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+        <div class="col2">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+        <div class="col2">
+            <h1>Title</h1>
+            <img src="https://picsum.photos/300/200/?random=1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ratione, tenetur aspernatur quisquam
+                expedita, reiciendis ipsa, ducimus distinctio neque temporibus vel ad qui vitae debitis perferendis
+                dicta reprehenderit molestias provident.</p>
+        </div>
+    </div>
+</body>
+
+</html>
