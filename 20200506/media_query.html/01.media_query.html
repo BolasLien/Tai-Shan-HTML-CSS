@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒體查詢</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* media type => all、print、screen、speech */
+        /* min-width 以上 */
+        /* max-width 以下 */
+        @media all and (min-width: 500px) {}
+
+        /* media type 為 all 時可以省略 */
+        @media (min-width: 500px) {}
+
+        /* 575px 以下 */
+        @media (max-width: 575px) {
+            .container {
+                width: 95%;
+                margin: 1rem auto;
+                border: 1px solid #000000;
+                padding: 15px;
+            }
+
+            h1 {
+                color: yellow;
+                background: darkorchid;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 介於 576px ~ 767px  */
+        @media (min-width: 576px) and (max-width: 767px) {
+            .container {
+                width: 60%;
+                margin: 1rem auto;
+                border: 3px solid #000000;
+                padding: 15px;
+            }
+
+            h1 {
+                color: yellow;
+                background: green;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 768px 以上 */
+        @media (min-width: 768px) {
+            .container {
+                width: 75%;
+                margin: 1rem auto;
+                border: 5px solid #000000;
+                padding: 15px;
+            }
+
+            h1 {
+                color: yellow;
+                background: darkred;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>對象全部。</h1>
+        <img src="https://picsum.photos/1920/600/?random=1">
+        <p>
+            推坑王溫度諮詢俱樂部自主對待評論招標，可能會高手精美動物無關之中不肯本月金融劇情先後，打算情況，這個需求給我們數碼你也原則在那裡身體打印日報，農業工具國語開發者大會各級保護是誰，前進網頁軍隊人士有很多較大印象名單鍵盤支持代表蘋果，收益帝國呼吸，收集能在而。
+        </p>
+    </div>
+</body>
+
+</html>

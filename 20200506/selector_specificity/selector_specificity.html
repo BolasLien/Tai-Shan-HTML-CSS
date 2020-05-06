@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS選擇器優先權</title>
+    <style>
+        /* 
+            優先權 =  inline > id# > class. > html <>
+
+            CSS 選擇器權種
+            黑桃 > 紅心 > 方塊 > 梅花
+            1. inline style 黑桃: 1,0,0,0
+            2. ID 選擇器 紅心: 0,1,0,0
+            3. Class 選擇器、屬性選擇器、虛擬類別 方塊: 0,0,1,0
+            4. 元素(標籤)、虛擬元素 梅花: 0,0,0,1
+
+         */
+
+        /* 第一組 */
+        /* 0 1 0 1 */
+        #container p {
+            color: red;
+        }
+
+        /* 0 0 1 1 */
+        .container p {
+            color: green;
+        }
+
+        /* 第二組 */
+        /*  0 1 1 1 */
+        #container2 .box p {
+            color: blue;
+        }
+
+        /* 0 1 0 1 */
+        #container2 p {
+            color: red;
+        }
+
+        /* 第三組 */
+        /* 0 0 2 2 => 多個選擇器就會往上積分(+號不算分，只是用到2個選擇器)*/
+        .container3 .box h1+p {
+            color: red;
+        }
+
+        /* 0 0 2 1 */
+        .container3 .box p {
+            /* !important => 優先權最高的選擇器，也比inline高 */
+            color: blue !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="box">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ducimus deserunt labore similique
+                veritatis placeat a necessitatibus dolorem temporibus sapiente.</p>
+        </div>
+    </div>
+
+    <div class="container2" id="container2">
+        <div class="box">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ducimus deserunt labore similique
+                veritatis placeat a necessitatibus dolorem temporibus sapiente.</p>
+        </div>
+    </div>
+
+    <div class="container3" id="container3">
+        <div class="box">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde ducimus deserunt labore similique
+                veritatis placeat a necessitatibus dolorem temporibus sapiente.</p>
+        </div>
+    </div>
+</body>
+
+</html>

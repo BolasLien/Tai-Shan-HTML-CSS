@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1rem solid #ffee99;
+        }
+
+        .bg {
+            background: url(01.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .object-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* object-position 預設 center center */
+            object-position: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>背景圖 background-size</h1>
+    <div class="box bg"></div>
+    <h1>圖片 object-fit</h1>
+    <div class="box">
+        <img src="02.jpg" class="object-fit">
+    </div>
+</body>
+
+</html>
