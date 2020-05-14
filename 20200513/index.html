@@ -10,33 +10,20 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
 
     <title>Hello, world!</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container bg-primary">固定寬度</div>
-    <div class="container-fluid bg-info">滿版</div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-6 col-lg-2 bg-primary">
-                One of three columns
-            </div>
-            <div class="col-2 col-lg-3 bg-success">
-                One of three columns
-            </div>
-            <div class="col-4 col-lg-7 bg-danger">
-                One of three columns
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col col-lg-5 bg-primary">columns</div>
-            <div class="col col-lg-7 bg-success">columns</div>
-            <div class="w-100"></div>
-            <div class="col col-lg-5 bg-danger">columns</div>
-            <div class="col col-lg-5 bg-primary">columns</div>
+    <div class="container bg-dark justify-content-center align-items-center" style="height: 80%; display: flex;">
+        <div class="row justify-content-center align-items-center h-75 bg-light">
+            <div class="col-9 bg-primary">One of three columns</div>
+            <div class="col-4 bg-success">One of three columns</div>
+            <div class="col-6 bg-danger">One of three columns</div>
         </div>
     </div>
 
