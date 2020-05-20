@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <title>Hello, world!</title>
+    <style>
+        h4 {
+            margin: 1rem 0;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .container {
+            margin-bottom: 2rem;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            color: #6c757d;
+            content: '>';
+        }
+
+        /* 使用unicode */
+        .breadcrumb-item+.breadcrumb-item::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            color: #6c757d;
+            content: '\27AC';
+        }
+
+        /* 使用base64
+            優點:因為字串，下載不需要發送請求圖片的需求，可減少下載時間，可以更快看到結果
+            缺點，比平常的圖片還大，越複雜的檔案容量越大，base碼會越長，建議使用在icon */
+        .breadcrumb-item+.breadcrumb-item::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            height: 30px;
+            color: #6c757d;
+            content: url('data:image/png;base64,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');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>1. 麵包屑可以修改 before 的 content</h4>
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                    </ol>
+                </nav>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        let count = 0
+        $("#badge1").text(count)
+        $('#btn1').on('click', function () {
+
+            $("#badge1").text(++count)
+        })
+    </script>
+</body>
+
+</html>
