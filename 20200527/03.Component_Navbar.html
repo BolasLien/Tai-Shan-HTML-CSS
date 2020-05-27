@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <!-- Animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+  <title>Hello, world!</title>
+  <style>
+    h4 {
+      margin: 1rem 0;
+    }
+
+    body {
+      background: #eee;
+    }
+
+    .container {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>導覽列 (Navbar)</h3>
+  <h4>導覽列由 logo、摺疊導覽選單及功能性元件(component)所組成。.navbar 本身是 flexbox ，因此裡面的 logo 及選單搜尋，兩個部分為彈性項目</h4>
+  <!-- 
+    .navbar-expand-xx 指的是在哪個中斷點展開整個 navbar
+    需要折疊的導覽列，加入 .navbar-expand{-sm|-md|-lg|-xl}
+    不需要折疊的導覽列，就不要加 .navbar-expand
+
+    顏色 在 .navbar 裡面加入
+    .navbar-light .bg-light 光明模式
+    .navbar-dark .bg-dark 黑暗模式
+
+    定位 在 .navbar 裡面加入
+    .fixed-top 固定在瀏覽器上方
+    .fixed-bottom 固定在瀏覽器下方
+    .sticky-top 當內容捲動到超過這個項目時，卡在瀏覽器上方
+    -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- .navbar-brand 指的是 logo 可以輸入文字或是圖片 -->
+    <a class="navbar-brand" href="#"><img src="./images/svg.svg" alt="" width="40"></a>
+    <!-- 漢堡按鈕 .navbar 發生折疊的時候才會出現 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+      <img src="" alt="">
+    </button>
+    <!-- 
+      .collapse => navbar的選單列表
+      放在 .navbar 之前 => 向上展開
+      放在 .navbar 之後 => 向下展開
+      
+      navbar-collapse 是 flexbox
+      可加入 justify-content-* 去對齊項目
+    -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- 彈性項目可以使用 mr-auto去推移 -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            Dropdown
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <!-- form-inline 是 flexbox -->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
