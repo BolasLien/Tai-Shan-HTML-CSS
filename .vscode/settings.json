@@ -2,6 +2,7 @@
     "liveServer.settings.port": 5501,
     "workbench.colorCustomizations": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "activityBar.activeBackground": "#fdf4b3",
       "activityBar.activeBorder": "#05baa4",
       "activityBar.background": "#fdf4b3",
@@ -21,6 +22,8 @@
     },
     "peacock.color": "#fbec82"
 =======
+=======
+>>>>>>> Stashed changes
       "activityBar.activeBackground": "#fefbe6",
       "activityBar.activeBorder": "#07b8a2",
       "activityBar.background": "#fefbe6",
@@ -39,5 +42,8 @@
       "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#fdf4b4"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
