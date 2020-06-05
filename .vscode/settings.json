@@ -1,6 +1,7 @@
 {
     "liveServer.settings.port": 5501,
     "workbench.colorCustomizations": {
+<<<<<<< Updated upstream
       "activityBar.activeBackground": "#fdf4b3",
       "activityBar.activeBorder": "#05baa4",
       "activityBar.background": "#fdf4b3",
@@ -19,4 +20,24 @@
       "titleBar.inactiveForeground": "#15202b99"
     },
     "peacock.color": "#fbec82"
+=======
+      "activityBar.activeBackground": "#fefbe6",
+      "activityBar.activeBorder": "#07b8a2",
+      "activityBar.background": "#fefbe6",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#07b8a2",
+      "activityBarBadge.foreground": "#15202b",
+      "statusBar.background": "#fdf4b4",
+      "statusBar.border": "#fdf4b4",
+      "statusBar.foreground": "#15202b",
+      "statusBarItem.hoverBackground": "#fced82",
+      "titleBar.activeBackground": "#fdf4b4",
+      "titleBar.activeForeground": "#15202b",
+      "titleBar.border": "#fdf4b4",
+      "titleBar.inactiveBackground": "#fdf4b499",
+      "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#fdf4b4"
+>>>>>>> Stashed changes
 }
