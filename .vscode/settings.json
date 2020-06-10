@@ -1,8 +1,6 @@
 {
     "liveServer.settings.port": 5501,
     "workbench.colorCustomizations": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
       "activityBar.activeBackground": "#fdf4b3",
       "activityBar.activeBorder": "#05baa4",
       "activityBar.background": "#fdf4b3",
@@ -20,10 +18,7 @@
       "titleBar.inactiveBackground": "#fbec8299",
       "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#fbec82"
-=======
-=======
->>>>>>> Stashed changes
+    "peacock.color": "#fdf4b4",
       "activityBar.activeBackground": "#fefbe6",
       "activityBar.activeBorder": "#07b8a2",
       "activityBar.background": "#fefbe6",
@@ -39,11 +34,13 @@
       "titleBar.activeForeground": "#15202b",
       "titleBar.border": "#fdf4b4",
       "titleBar.inactiveBackground": "#fdf4b499",
-      "titleBar.inactiveForeground": "#15202b99"
-    },
-    "peacock.color": "#fdf4b4"
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-}
+      "titleBar.inactiveForeground": "#15202b99",
+      "editor.formatOnSave": true,
+      "prettier.singleQuote": true,
+      "prettier.semi": false,
+      "prettier.printWidth": 120,
+      "prettier.trailingComma": "es5",
+      "prettier.tabWidth": 2
+    }
+
+    
