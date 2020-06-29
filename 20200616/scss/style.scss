@@ -1,0 +1,521 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
+}
+
+.container {
+  width: 75%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 2rem !important;
+}
+
+// 我是單行註解，不會被編譯出去
+/* 我是多行註解，會被編譯出去 */
+
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --waring: #ffc107;
+  --danger: #dc3545;
+  --white: #ffffff;
+}
+
+/* 1. Variables (變數) */
+// 變數可以用來控制網站的一致性，例如顏色、間距、寬度、高度、動畫轉場數值等等...
+$primary: #007bff;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$waring: #ffc107;
+$danger: #dc3545;
+$white: #ffffff;
+$gradient: linear-gradient(
+  0deg,
+  rgba(4, 0, 74, 1) 0%,
+  rgba(0, 12, 198, 1) 54%,
+  rgba(0, 23, 255, 1) 100%
+);
+$border: 5px solid #fff;
+$border-radius: 0.5rem;
+$padding: 0.5rem;
+$margin-bottom: 1rem;
+$shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+
+h1 {
+  background: $primary $gradient;
+  color: $white;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $padding;
+  box-shadow: $shadow;
+}
+
+/* 2. 嵌套(Nested) */
+// 改善 CSS 重複撰寫選擇氣的工作，減少重工
+#section02 {
+  .menu {
+    margin-top: 1rem;
+    font-size: 0;
+    li {
+      display: inline-block;
+      width: 100px;
+      text-align: center;
+      font-size: 1rem;
+      a {
+        display: block;
+        background: black;
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem;
+        &:hover {
+          color: yellow;
+          background: #aaa;
+        }
+      }
+    }
+
+    li + li {
+      border-left: 1px solid #fff;
+    }
+  }
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// 嵌套屬性
+nav {
+  font: {
+    family: "微軟正黑體";
+    size: 1rem;
+    weight: bolder;
+  }
+  border: {
+    style: solid;
+    width: 1px;
+    color: #ccc;
+  }
+}
+
+// 練習 : 用嵌套建立三欄結構
+#exercise {
+  .container {
+    .row {
+      display: flex;
+    }
+
+    .col {
+      width: 33%;
+      height: auto;
+      border: 1px solid #999;
+      border-radius: $border-radius;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+      }
+      h2 {
+        text-align: center;
+        a {
+          color: black;
+          text-decoration: none;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* 3. Extend (繼承) % */
+
+.extend {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+// %不會被編譯出來
+%extend {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+#extend {
+  margin-top: 1rem;
+  overflow: auto;
+}
+
+/* 繼承後的樣式會被群組樣式放在一起 */
+.box1 {
+  @extend %extend;
+  background: red;
+}
+
+.box2 {
+  @extend %extend;
+  background: green;
+}
+
+.box3 {
+  @extend %extend;
+  background: blue;
+}
+
+/* 4. Sass 的數學計算 */
+$w: 500px;
+$a: 10px;
+.box4 {
+  background: #000;
+  /* 加法 */
+  width: 50px + 50px;
+  height: 50px + 50px;
+  /* 減法 */
+  width: 100px - 50px;
+  height: 100px - 50px;
+  /* 乘法 */
+  width: 50px * 2;
+  height: 50px * 2;
+  /* 除法，須注意使用括號 */
+  width: (100px / 2);
+  /* 除法用變數，括號可省略 */
+  /* 當分子、分母都有單位，單位會被消除 */
+  height: $w/$a;
+  /* 餘數 */
+  margin-top: 20px % 100;
+}
+
+/* 5. Function(函式) */
+// 基礎字大小
+$baseSize: 14px;
+$size: 2px;
+
+// 計算文字大小
+@function fontSize($level: 0) {
+  @if $level < 0 {
+    $level: 0;
+  }
+  // round 內建函式:四捨五入
+  @return $baseSize + $size * round($level);
+}
+
+#section05 {
+  .container {
+    p {
+      font-size: fontSize(10);
+    }
+  }
+}
+
+$lineHeightLevel: 1.4;
+@function lineHeight($fontSize) {
+  // ceil 內建函式，無條件進位
+  @return ceil($fontSize * $lineHeightLevel);
+}
+
+// 計算欄位寬度
+@function colWidth($colCount) {
+  @return (100% / $colCount);
+}
+
+// 灰階計算
+@function gray($level: 0) {
+  @return darken(#fff, $level);
+}
+
+#section05 {
+  .container {
+    p {
+      font-size: fontSize(2);
+      line-height: lineHeight(fontSize(2));
+    }
+  }
+
+  .row {
+    display: flex;
+    .col {
+      border: 1px solid #333;
+      padding: 1%;
+      margin: 1% 0;
+      width: colWidth(3);
+      background: gray(10%);
+      color: lighten(black, 30%);
+    }
+  }
+}
+
+/* 6. Mixins(混合) */
+@mixin btn-set($bgcolor) {
+  & {
+    background-color: $bgcolor;
+  }
+
+  &:hover {
+    @if $bgcolor == #000 {
+      background-color: lighten($bgcolor, 10%);
+    } @else {
+      background-color: darken($bgcolor, 10%);
+    }
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0 0 5px #333;
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  padding: 0.3rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin: 0 0.2rem;
+  @include box-shadow();
+}
+
+.btn-primary {
+  @include btn-set($primary);
+}
+.btn-success {
+  @include btn-set($success);
+}
+.btn-danger {
+  @include btn-set($danger);
+}
+.btn-black {
+  @include btn-set(#000);
+}
+
+// @include 多個引數，mixin 參數可以用...表示
+@mixin box-shadow2($shadow...) {
+  box-shadow: $shadow;
+}
+
+.box-shadow2 {
+  @include box-shadow2(0 0 10px blue, 0 0 20px red);
+}
+
+@mixin flex($main, $corss) {
+  display: flex;
+  justify-content: $main;
+  align-items: $corss;
+}
+
+.flex {
+  @include flex(center, center);
+}
+
+%box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+// 多參數會以 list 型態傳入
+@mixin build-step($selectors...) {
+  @for $i from 1 through length($selectors) {
+    // #{}插值語法，像 js 的樣板字串 ${}
+    .#{nth($selectors,$i)} {
+      @extend %box;
+      background: rgb(random(255), random(255), random(255));
+    }
+  }
+}
+
+@include build-step("b1", "b2", "b3", "b4", "b5");
+
+/* 7. 使用 @mixin + @content 來設計 RWD */
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// #section07{
+//   @include sm{
+
+//   }
+
+//   @include md{
+
+//   }
+
+//   @include lg{
+
+//   }
+
+//   @include xl{
+
+//   }
+// }
+
+#section07 {
+  .container {
+    width: 100%;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #333;
+  }
+  @include sm {
+    .container {
+      width: 75%;
+    }
+
+    .col {
+      width: 50%;
+    }
+  }
+
+  @include md {
+    .col {
+      width: 33.33333%;
+    }
+  }
+
+  @include lg {
+    .col {
+      width: 25%;
+    }
+  }
+
+  @include xl {
+    .col {
+      width: 20%;
+    }
+  }
+}
+
+/* 資料型態 */
+$width: 100px, 200px, 300px;
+$bgcolor: red, green, blue;
+$margin: 10px, 10px, 15px, 15px;
+
+.list {
+  // 取出元素的值
+  width: nth($width, 1);
+  width: nth($width, 2);
+  width: nth($width, 3);
+  background-color: nth($bgcolor, 1);
+  background-color: nth($bgcolor, 2);
+  background-color: nth($bgcolor, 3);
+}
+
+.index {
+  // 取出索引值
+  line-height: index($width, 100px);
+  line-height: index($width, 200px);
+  line-height: index($width, 300px);
+  z-index: index($bgcolor, red);
+  z-index: index($bgcolor, green);
+  z-index: index($bgcolor, blue);
+}
+
+.length {
+  // list 的長度
+  z-index: length($width);
+}
+
+$list: red, blue, green;
+
+/* 使用 @each 迭代 list 取出值 */
+// @each 是 sass 迭代 list 或 map 物件，逐一取出 key/value 的方法
+@each $value in $list {
+  .bo-color-#{$value} {
+    background-color: $value;
+  }
+}
+
+/* Map 是 sass 物件，就像 js 的物件，有key/value存值方式 */
+// map1
+$map1: (
+  color1: "red",
+  color2: "blue",
+  color3: "green",
+);
+
+/* 對 map 物件去取出 key/value */
+@each $key, $value in $map1 {
+  .#{$key} {
+    color: $value;
+  }
+}
+
+// map2 物件包物件
+$map2: (
+  default: (
+    width: 100px,
+    height: 100px,
+  ),
+  box1: (
+    width: 200px,
+    height: 200px,
+  ),
+  box2: (
+    width: 300px,
+    height: 300px,
+  ),
+);
+
+@each $key, $value in $map2 {
+  $width: map-get($value, width);
+  $height: map-get($value, height);
+  .btn-#{$key} {
+    width: $width;
+    height: $height;
+  }
+}

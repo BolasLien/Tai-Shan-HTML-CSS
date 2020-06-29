@@ -1,0 +1,36 @@
+// 基礎字大小
+$baseSize: 14px;
+$size: 2px;
+
+// 計算文字大小
+@function fontSize($level: 0) {
+  @if $level < 0 {
+    $level: 0;
+  }
+  // round 內建函式:四捨五入
+  @return $baseSize + $size * round($level);
+}
+
+#section05 {
+  .container {
+    p {
+      font-size: fontSize(10);
+    }
+  }
+}
+
+$lineHeightLevel: 1.4;
+@function lineHeight($fontSize) {
+  // ceil 內建函式，無條件進位
+  @return ceil($fontSize * $lineHeightLevel);
+}
+
+// 計算欄位寬度
+@function colWidth($colCount) {
+  @return (100% / $colCount);
+}
+
+// 灰階計算
+@function gray($level: 0) {
+  @return darken(#fff, $level);
+}
